@@ -25,14 +25,21 @@ pipeline {
 
         stage('install dependencies') {
             steps {
-                sh 'pip install -r requirements.txt' 
+                sh '''
+                python3 -m venv venv
+                source venv/bin/activate
+                pip install -r requirements.txt
+                '''
             }
         }
 
         stage('test run') {
             steps {
-                sh 'ls -la'
-                sh 'python3 gen_pass.py'
+                sh '''
+                ls -la
+                source venv/bin/activate
+                python3 gen_pass.py
+                '''
             }
         }
 
