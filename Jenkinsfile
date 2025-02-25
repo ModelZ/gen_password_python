@@ -25,6 +25,7 @@ pipeline {
 
         stage('test run') {
             steps {
+                sh 'ls -la'
                 sh 'python3 genpass.py'
             }
         }
