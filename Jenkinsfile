@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh '''
                 python3 -m venv venv
-                source venv/bin/activate
+                . venv/bin/activate
                 pip install -r requirements.txt
                 '''
             }
@@ -37,7 +37,7 @@ pipeline {
             steps {
                 sh '''
                 ls -la
-                source venv/bin/activate
+                . venv/bin/activate
                 python3 gen_pass.py
                 '''
             }
