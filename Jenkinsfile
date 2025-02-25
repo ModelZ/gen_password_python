@@ -33,7 +33,7 @@ pipeline {
 
     post {
         always {
-
+            echo 'This is Post Stages'
         }
         success {
             echo 'Build and deployment successful.'
