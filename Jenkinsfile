@@ -19,7 +19,7 @@ pipeline {
 
         stage('install python') {
             steps {
-                sh 'apt install python3 -y' 
+                sh 'apt install python3 python3-pip -y' 
             }
         }
 
