@@ -23,6 +23,12 @@ pipeline {
             }
         }
 
+        stage('install dependencies') {
+            steps {
+                sh 'pip install -r requirements.txt' 
+            }
+        }
+
         stage('test run') {
             steps {
                 sh 'ls -la'
